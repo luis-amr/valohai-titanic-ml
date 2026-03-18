@@ -1,6 +1,6 @@
 - step:
     name: preprocess
-    image: docker.io/yourdocker/titanic-ml
+    image: docker.io/luimero/titanic-ml
     command:
       - python src/preprocess.py
     outputs:
@@ -8,7 +8,7 @@
 
 - step:
     name: train
-    image: docker.io/yourdocker/titanic-ml
+    image: docker.io/luimero/titanic-ml
     command:
       - python src/train.py
     inputs:
@@ -19,7 +19,7 @@
 
 - step:
     name: evaluate
-    image: docker.io/yourdocker/titanic-ml
+    image: docker.io/luimero/titanic-ml
     command:
       - python src/evaluate.py
     inputs:
