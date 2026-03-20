@@ -61,3 +61,7 @@ Genera el reporte de monitoreo local con Evidently para evaluar el comportamient
 
 ---
 *Proyecto desarrollado como práctica de MLOps y empaquetamiento de modelos predictivos.*
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
