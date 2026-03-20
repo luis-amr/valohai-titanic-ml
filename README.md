@@ -50,7 +50,7 @@ Despliega y ejecuta las fases de preprocesamiento, entrenamiento y evaluación s
 3. Ingresar a la pestaña **Pipelines** y haz clic en **Create Pipeline**.
 4. Seleccionar el Blueprint `training-pipeline` y ejecutar el proceso.
 
-> ** Nota:** Tener en cuenta que la asignación de máquinas virtuales para ejecutar el modelo en Valohai requiere un plan de pago activo.
+> ** Nota:** Tener en cuenta la asignación de máquinas virtuales para ejecutar el modelo en Valohai requiere un plan de pago activo.
 
 ### 3. Monitoreo de Data Drift (Local)
 Genera el reporte de monitoreo local con Evidently para evaluar el comportamiento del modelo frente a nuevos datos de producción:
