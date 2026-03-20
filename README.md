@@ -1,8 +1,8 @@
-# 🚢 Titanic ML Pipeline con Valohai y Evidently AI
+#  Titanic ML Pipeline con Valohai y Evidently AI
 
 Implementa y automatiza el ciclo de vida de un modelo de Machine Learning utilizando **Valohai** como plataforma de MLOps. Predice la supervivencia de los pasajeros del Titanic basándote en sus características y detecta posibles desviaciones en los datos (*Data Drift*) mediante el uso de **Evidently AI**.
 
-## 📂 Estructura del Proyecto
+##  Estructura del Proyecto
 
 Organiza el repositorio con la siguiente estructura de directorios para garantizar el despliegue correcto del pipeline:
 
@@ -13,14 +13,14 @@ valohai-titanic-ml/
 ├── src/                      # Scripts de ejecución del pipeline 
 │   ├── preprocess.py         # Limpieza, codificación y manejo de nulos 
 │   ├── train.py              # Entrenamiento del modelo RandomForest 
-│   └── evaluate.py           # Evaluación de métricas (Accuracy) 
+│   └── evaluate.py           # Evaluación de métricas (Accuracy,...) 
 ├── Dockerfile                # Receta para construir la imagen base del entorno 
 ├── requirements.txt          # Dependencias (pandas, scikit-learn, joblib, evidently) 
 ├── valohai.yaml              # Orquestador de pasos y configuración del pipeline 
 └── drift_report.py           # Script local para generar el reporte HTML de Evidently
 ```
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 * **Lenguaje:** Python 3.10
 * **Librerías ML:** Pandas, Scikit-Learn, Joblib
@@ -28,7 +28,7 @@ valohai-titanic-ml/
 * **Contenedores:** Docker 
 * **Monitoreo:** Evidently AI (v0.4.39)
 
-## 🚀 Guía de Ejecución
+##  Guía de Ejecución
 
 ### 1. Construcción de Imagen Docker
 Construye y sube la imagen a Docker Hub para aislar el entorno y evitar la instalación de dependencias en cada paso del pipeline:
@@ -45,19 +45,19 @@ docker push <tu-usuario-docker>/titanic-ml:latest
 ### 2. Ejecución del Pipeline en Valohai
 Despliega y ejecuta las fases de preprocesamiento, entrenamiento y evaluación siguiendo estos pasos:
 
-1. Ingresa a [Valohai](https://valohai.com/) y crea un nuevo proyecto.
-2. Navega a **Settings > Repository** y enlaza la URL de este repositorio de GitHub.
-3. Dirígete a la pestaña **Pipelines** y haz clic en **Create Pipeline**.
-4. Selecciona el Blueprint `training-pipeline` y ejecuta el proceso.
+1. Ingresar a [Valohai](https://valohai.com/) y crear un nuevo proyecto.
+2. Navegar a **Settings > Repository** y enlazar la URL de este repositorio de GitHub.
+3. Ingresar a la pestaña **Pipelines** y haz clic en **Create Pipeline**.
+4. Seleccionar el Blueprint `training-pipeline` y ejecutar el proceso.
 
-> **⚠️ Nota de infraestructura:** Ten en cuenta que la asignación de máquinas virtuales para ejecutar el modelo en Valohai requiere un plan de pago activo.
+> ** Nota:** Tener en cuenta que la asignación de máquinas virtuales para ejecutar el modelo en Valohai requiere un plan de pago activo.
 
 ### 3. Monitoreo de Data Drift (Local)
 Genera el reporte de monitoreo local con Evidently para evaluar el comportamiento del modelo frente a nuevos datos de producción:
 
-1. Instala la versión estricta de Evidently requerida: `pip install evidently==0.4.39`.
-2. Ejecuta el script de análisis: `python drift_report.py`.
-3. Abre el archivo generado `titanic_drift_report.html` en un navegador web para explorar las métricas y los gráficos interactivos.
+1. Instalar la versión de Evidently requerida: `pip install evidently==0.4.39`.
+2. Ejecutar el script de análisis: `python drift_report.py`.
+3. Abrir el archivo generado `titanic_drift_report.html` en un navegador web para explorar las métricas y los gráficos interactivos.
 
 ---
 *Proyecto desarrollado como práctica de MLOps y empaquetamiento de modelos predictivos.*
