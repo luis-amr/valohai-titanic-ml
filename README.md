@@ -17,7 +17,7 @@ valohai-titanic-ml/
 ├── Dockerfile                # Receta para construir la imagen base del entorno 
 ├── requirements.txt          # Dependencias (pandas, scikit-learn, joblib, evidently) 
 ├── valohai.yaml              # Orquestador de pasos y configuración del pipeline 
-└── drift_report.py           # Script local para generar el reporte HTML de Evidently
+└── evi.py                    # Script local para generar el reporte HTML de Evidently
 ```
 
 ##  Tecnologías Utilizadas
@@ -56,8 +56,8 @@ Despliega y ejecuta las fases de preprocesamiento, entrenamiento y evaluación s
 Genera el reporte de monitoreo local con Evidently para evaluar el comportamiento del modelo frente a nuevos datos de producción:
 
 1. Instalar la versión de Evidently requerida: `pip install evidently==0.4.39`.
-2. Ejecutar el script de análisis: `python drift_report.py`.
-3. Abrir el archivo generado `titanic_drift_report.html` en un navegador web para explorar las métricas y los gráficos interactivos.
+2. Ejecutar el script de análisis: `python evi.py`.
+3. Abrir el archivo generado `reporte_drift_titanic.html` en un navegador web para explorar las métricas y los gráficos interactivos.
 
 ---
 *Proyecto desarrollado como práctica de MLOps y empaquetamiento de modelos predictivos.*
