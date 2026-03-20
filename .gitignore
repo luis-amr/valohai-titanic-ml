@@ -1,0 +1,15 @@
+# Entornos virtuales
+env/
+venv/
+.env
+
+# Reportes generados (mejor verlos localmente)
+reporte_drift_titanic.html
+*.html
+
+# Datos procesados temporales
+data/processed.csv
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
