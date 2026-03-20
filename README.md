@@ -22,7 +22,7 @@ valohai-titanic-ml/
 
 ##  Tecnologías Utilizadas
 
-* **Lenguaje:** Python 3.10
+* **Lenguaje:** Python 3.10 - 3.12
 * **Librerías ML:** Pandas, Scikit-Learn, Joblib
 * **MLOps & Orquestación:** Valohai 
 * **Contenedores:** Docker 
